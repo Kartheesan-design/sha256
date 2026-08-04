@@ -1,0 +1,96 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Wed Jul 29 12:18:32 2026                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v21.15-s110_1 (64bit) 09/23/2022 13:08 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: NanoRoute 21.15-s110_1 NR220912-2004/21_15-UB (database version 18.20.592) {superthreading v2.17}
+#@(#)CDS: AAE 21.15-s039 (64bit) 09/23/2022 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: CTE 21.15-s038_1 () Sep 20 2022 11:42:13 ( )
+#@(#)CDS: SYNTECH 21.15-s012_1 () Sep  5 2022 10:25:51 ( )
+#@(#)CDS: CPE v21.15-s076
+#@(#)CDS: IQuantus/TQuantus 21.1.1-s867 (64bit) Sun Jun 26 22:12:54 PDT 2022 (Linux 3.10.0-693.el7.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getVersion
+getVersion
+getVersion
+win
+set init_design_uniquify 1
+set init_verilog ../synthesis/sha256.netlist.v
+set init_design_netlisttype Verilog
+set init_design_settop 1
+set init_top_cell sha256
+set init_lef_file {../techlef//asap7_tech_4x_201209.lef ../lef/scaled//asap7sc7p5t_28_L_4x_220121a.lef ../lef/scaled//asap7sc7p5t_28_SL_4x_220121a.lef ../lef/scaled//asap7sc7p5t_28_R_4x_220121a.lef}
+set fp_core_cntl aspect
+set fp_aspect_ratio 1.0000
+set extract_shrink_factor 1.0
+set init_assign_buffer 0
+set init_pwr_net VDD
+set init_gnd_net VSS
+set init_cpf_file {}
+set init_mmmc_file sha256.mmmc
+init_design
+fit
+uiSetTool ruler
+uiSetTool ruler
+uiSetTool ruler
+uiSetTool ruler
+uiSetTool ruler
+uiSetTool ruler
+uiSetTool ruler
+uiSetTool cutWire
+editCutWire -only_visible_wires -line { 106.83225 110.661 90.5255 94.35425 }
+uiSetTool cutWire
+uiSetTool select
+setDesignMode -process 7 -node N7
+setMultiCpuUsage -localCpu 8
+setDesignMode -bottomRoutingLayer 2
+setDesignMode -topRoutingLayer 7
+globalNetConnect VDD -type pgpin -pin VDD -inst *
+globalNetConnect VSS -type pgpin -pin VSS -inst *
+floorPlan -site asap7sc7p5t -s 191.16 191.16 6.22 6.22 6.22 6.22 -noSnap
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Left -layer 3 -spreadType center -spacing 2.016 -pin {reset_n clk {address[0]} {address[1]} {address[2]} {address[3]} {address[4]} {address[5]} {address[6]} {address[7]} cs we {write_data[0]} {write_data[1]} {write_data[2]} {write_data[3]} {write_data[4]} {write_data[5]} {write_data[6]} {write_data[7]} {write_data[8]} {write_data[9]} {write_data[10]} {write_data[11]} {write_data[12]} {write_data[13]} {write_data[14]} {write_data[15]} {write_data[16]} {write_data[17]} {write_data[18]} {write_data[19]} {write_data[20]} {write_data[21]} {write_data[22]} {write_data[23]} {write_data[24]} {write_data[25]} {write_data[26]} {write_data[27]} {write_data[28]} {write_data[29]} {write_data[30]} {write_data[31]}}
+editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Right -layer 3 -spreadType center -spacing 2 -pin {error {read_data[0]} {read_data[1]} {read_data[2]} {read_data[3]} {read_data[4]} {read_data[5]} {read_data[6]} {read_data[7]} {read_data[8]} {read_data[9]} {read_data[10]} {read_data[11]} {read_data[12]} {read_data[13]} {read_data[14]} {read_data[15]} {read_data[16]} {read_data[17]} {read_data[18]} {read_data[19]} {read_data[20]} {read_data[21]} {read_data[22]} {read_data[23]} {read_data[24]} {read_data[25]} {read_data[26]} {read_data[27]} {read_data[28]} {read_data[29]} {read_data[30]} {read_data[31]}}
+redraw
+redraw
+redraw
+redraw
+zoomBox -80.78650 -8.60500 247.50875 175.17875
+zoomBox -13.05775 -2.92250 26.63550 19.29825
+zoomBox -3.88350 -1.84075 1.76300 1.32025
+zoomBox -2.34850 -1.08775 1.11925 0.85350
+zoomBox -0.46250 -0.19300 0.11800 0.13200
+zoomBox -0.40625 -0.16825 0.08725 0.10800
+fit
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Left -layer 3 -spreadType center -spacing 2.016 -pin {reset_n clk {address[0]} {address[1]} {address[2]} {address[3]} {address[4]} {address[5]} {address[6]} {address[7]} cs we {write_data[0]} {write_data[1]} {write_data[2]} {write_data[3]} {write_data[4]} {write_data[5]} {write_data[6]} {write_data[7]} {write_data[8]} {write_data[9]} {write_data[10]} {write_data[11]} {write_data[12]} {write_data[13]} {write_data[14]} {write_data[15]} {write_data[16]} {write_data[17]} {write_data[18]} {write_data[19]} {write_data[20]} {write_data[21]} {write_data[22]} {write_data[23]} {write_data[24]} {write_data[25]} {write_data[26]} {write_data[27]} {write_data[28]} {write_data[29]} {write_data[30]} {write_data[31]}}
+editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Right -layer 3 -spreadType center -spacing 2 -pin {error_pip {read_data_pip[0]} {read_data_pip[1]} {read_data_pip[2]} {read_data_pip[3]} {read_data_pip[4]} {read_data_pip[5]} {read_data_pip[6]} {read_data_pip[7]} {read_data_pip[8]} {read_data_pip[9]} {read_data_pip[10]} {read_data_pip[11]} {read_data_pip[12]} {read_data_pip[13]} {read_data_pip[14]} {read_data_pip[15]} {read_data_pip[16]} {read_data_pip[17]} {read_data_pip[18]} {read_data_pip[19]} {read_data_pip[20]} {read_data_pip[21]} {read_data_pip[22]} {read_data_pip[23]} {read_data_pip[24]} {read_data_pip[25]} {read_data_pip[26]} {read_data_pip[27]} {read_data_pip[28]} {read_data_pip[29]} {read_data_pip[30]} {read_data_pip[31]}}
+editPin -snap TRACK -pin *
+setPinAssignMode -pinEditInBatch false
+legalizePin
+redraw
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer Pad -stacked_via_bottom_layer M1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {VDD VSS} -type core_rings -follow core -layer {top M7 bottom M7 left M6 right M6} -width 2.176 -spacing 0.384 -offset 0.384 -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+addStripe -skip_via_on_wire_shape Noshape -set_to_set_distance 12.960 -skip_via_on_pin Standardcell -stacked_via_top_layer Pad -spacing 0.360 -xleft_offset 0.360 -layer M3 -width 0.936 -nets {VDD VSS} -stacked_via_bottom_layer M2 -start_from left
+addStripe -skip_via_on_wire_shape Noshape -direction horizontal -set_to_set_distance 21.6 -skip_via_on_pin Standardcell -stacked_via_top_layer M7 -spacing 0.864 -layer M4 -width 0.864 -nets {VDD VSS} -stacked_via_bottom_layer M3 -start_from bottom
+setSrouteMode -reset
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { corePin } -layerChangeRange { M1(1) M7(1) } -blockPinTarget { nearestTarget } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -deleteExistingRoutes -allowJogging 0 -crossoverViaLayerRange { M1(1) Pad(10) } -nets { VDD VSS } -allowLayerChange 0 -targetViaLayerRange { M1(1) Pad(10) }
+editPowerVia -add_vias 1 -orthogonal_only 0
+setOptMode -holdTargetSlack 0.020
+setOptMode -setupTargetSlack 0.020
+colorizePowerMesh
+place_opt_design
+zoomBox -18.89625 48.58400 270.14925 210.39525
+zoomBox 10.18900 71.22850 255.87775 208.76800
+zoomBox 68.37225 119.36375 219.25625 203.83050
+zoomBox 136.94575 175.92175 178.06075 198.93850
+pan -0.03225 40.71175
+zoomBox 119.34000 159.76050 198.10400 203.85350
+fit
+zoomBox -131.18525 -43.74100 339.47700 219.74150

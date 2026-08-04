@@ -1,0 +1,175 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v21.15-s110_1, built Fri Sep 23 13:08:12 PDT 2022
+Options:	-init innovus.tcl 
+Date:		Wed Jul 29 12:15:18 2026
+Host:		cadence-server.vit.ac.in (x86_64 w/Linux 4.18.0-477.21.1.el8_8.x86_64) (16cores*32cpus*Intel(R) Xeon(R) Gold 6346 CPU @ 3.10GHz 36864KB)
+OS:		Red Hat Enterprise Linux release 8.8 (Ootpa)
+
+License:
+		[12:15:18.400273] Configured Lic search path (21.01-s002): 5280@10.110.5.59
+
+		invs	Innovus Implementation System	21.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (2062 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getVersion
+<CMD> getVersion
+<CMD> getVersion
+[INFO] Loading PVS 22.20 fill procedures
+Sourcing file "innovus.tcl" ...
+<CMD> set init_design_uniquify 1
+<CMD> set init_verilog ../synthesis/sha256.netlist.v
+<CMD> set init_design_netlisttype Verilog
+<CMD> set init_design_settop 1
+<CMD> set init_top_cell sha256
+<CMD> set init_lef_file {../techlef//asap7_tech_4x_201209.lef ../lef/scaled//asap7sc7p5t_28_L_4x_220121a.lef ../lef/scaled//asap7sc7p5t_28_SL_4x_220121a.lef ../lef/scaled//asap7sc7p5t_28_R_4x_220121a.lef}
+<CMD> set fp_core_cntl aspect
+<CMD> set fp_aspect_ratio 1.0000
+<CMD> set extract_shrink_factor 1.0
+<CMD> set init_assign_buffer 0
+<CMD> set init_pwr_net VDD
+<CMD> set init_gnd_net VSS
+<CMD> set init_cpf_file {}
+<CMD> set init_mmmc_file sha256.mmmc
+<CMD> init_design
+#% Begin Load MMMC data ... (date=07/29 12:15:40, mem=989.0M)
+#% End Load MMMC data ... (date=07/29 12:15:40, total cpu=0:00:00.0, real=0:00:00.0, peak res=989.8M, current mem=989.8M)
+rc_typ_25
+
+Loading LEF file ../techlef/asap7_tech_4x_201209.lef ...
+
+Loading LEF file ../lef/scaled/asap7sc7p5t_28_L_4x_220121a.lef ...
+Set DBUPerIGU to M1 pitch 576.
+
+Loading LEF file ../lef/scaled/asap7sc7p5t_28_SL_4x_220121a.lef ...
+
+Loading LEF file ../lef/scaled/asap7sc7p5t_28_R_4x_220121a.lef ...
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+Loading view definition file from sha256.mmmc
+Reading tc timing library '/home/userdata/22bec0039/sha256/lib/asap7sc7p5t_AO_LVT_TT_nldm_211120.lib' ...
+Read 42 cells in library 'asap7sc7p5t_AO_LVT_TT_nldm_211120' 
+Reading tc timing library '/home/userdata/22bec0039/sha256/lib/asap7sc7p5t_INVBUF_LVT_TT_nldm_220122.lib' ...
+Read 37 cells in library 'asap7sc7p5t_INVBUF_LVT_TT_nldm_211120' 
+Reading tc timing library '/home/userdata/22bec0039/sha256/lib/asap7sc7p5t_OA_LVT_TT_nldm_211120.lib' ...
+Read 34 cells in library 'asap7sc7p5t_OA_LVT_TT_nldm_211120' 
+Reading tc timing library '/home/userdata/22bec0039/sha256/lib/asap7sc7p5t_SEQ_LVT_TT_nldm_220123.lib' ...
+Read 33 cells in library 'asap7sc7p5t_SEQ_LVT_TT_nldm_220123' 
+Reading tc timing library '/home/userdata/22bec0039/sha256/lib/asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.lib' ...
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/userdata/22bec0039/sha256/lib/asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.lib, Line 11387)
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/userdata/22bec0039/sha256/lib/asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.lib, Line 14287)
+Read 56 cells in library 'asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120' 
+Reading tc timing library '/home/userdata/22bec0039/sha256/lib/asap7sc7p5t_AO_SLVT_TT_nldm_211120.lib' ...
+Read 42 cells in library 'asap7sc7p5t_AO_SLVT_TT_nldm_211120' 
+Reading tc timing library '/home/userdata/22bec0039/sha256/lib/asap7sc7p5t_INVBUF_SLVT_TT_nldm_220122.lib' ...
+Read 37 cells in library 'asap7sc7p5t_INVBUF_SLVT_TT_nldm_211120' 
+Reading tc timing library '/home/userdata/22bec0039/sha256/lib/asap7sc7p5t_OA_SLVT_TT_nldm_211120.lib' ...
+Read 34 cells in library 'asap7sc7p5t_OA_SLVT_TT_nldm_211120' 
+Reading tc timing library '/home/userdata/22bec0039/sha256/lib/asap7sc7p5t_SEQ_SLVT_TT_nldm_220123.lib' ...
+Read 33 cells in library 'asap7sc7p5t_SEQ_SLVT_TT_nldm_220123' 
+Reading tc timing library '/home/userdata/22bec0039/sha256/lib/asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib' ...
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/userdata/22bec0039/sha256/lib/asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib, Line 11387)
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/userdata/22bec0039/sha256/lib/asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib, Line 14287)
+Read 56 cells in library 'asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120' 
+*** End library_loading (cpu=0.05min, real=0.05min, mem=77.0M, fe_cpu=0.28min, fe_real=0.42min, fe_mem=1080.5M) ***
+#% Begin Load netlist data ... (date=07/29 12:15:43, mem=1019.0M)
+*** Begin netlist parsing (mem=1080.5M) ***
+Created 404 new cells from 10 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '../synthesis/sha256.netlist.v'
+
+*** Memory Usage v#1 (Current mem = 1083.539M, initial mem = 491.871M) ***
+*** End netlist parsing (cpu=0:00:00.1, real=0:00:00.0, mem=1083.5M) ***
+#% End Load netlist data ... (date=07/29 12:15:43, total cpu=0:00:00.1, real=0:00:00.0, peak res=1054.6M, current mem=1054.6M)
+Set top cell to sha256.
+Hooked 404 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell sha256 ...
+*** Netlist is unique.
+Set DBUPerIGU to techSite asap7sc7p5t width 864.
+** info: there are 668 modules.
+** info: there are 11309 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 1158.453M, initial mem = 491.871M) ***
+Start create_tracks
+Extraction setup Started 
+Initializing multi-corner RC extraction with 1 active RC Corners ...
+Captable file(s) not specified in multi-corner setup. PreRoute extraction will use technology file. For postRoute extraction, default value for effort level would be 'medium' and effort level 'low' would not be allowed.
+Generating auto layer map file.
+Importing multi-corner technology file(s) for preRoute extraction...
+../qrc/qrcTechFile_typ03_scaled4xV06
+Generating auto layer map file.
+Completed (cpu: 0:00:02.3 real: 0:00:02.0)
+Set Shrink Factor to 1.00000
+Summary of Active RC-Corners : 
+ 
+ Analysis View: view_tc
+    RC-Corner Name        : rc_typ_25
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+    RC-Corner Technology file: '../qrc/qrcTechFile_typ03_scaled4xV06'
+Updating RC grid for preRoute extraction ...
+Initializing multi-corner resistance tables ...
+Default value for postRoute extraction mode's effortLevel (-effortLevel option of setExtractRCMode) changed to 'medium'.
+*Info: initialize multi-corner CTS.
+Reading timing constraints file '../sdc/sha256.sdc' ...
+Current (total cpu=0:00:19.7, real=0:00:29.0, peak res=1416.9M, current mem=1416.9M)
+sha256
+**WARN: (TCLNL-330):	set_input_delay on clock root 'clk' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File ../sdc/sha256.sdc, Line 10).
+
+INFO (CTE): Reading of timing constraints file ../sdc/sha256.sdc completed, with 1 WARNING
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1435.2M, current mem=1435.2M)
+Current (total cpu=0:00:19.7, real=0:00:29.0, peak res=1435.2M, current mem=1435.2M)
+Total number of combinational cells: 338
+Total number of sequential cells: 66
+Total number of tristate cells: 0
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUFx10_ASAP7_75t_SL BUFx12_ASAP7_75t_SL BUFx12f_ASAP7_75t_SL BUFx16f_ASAP7_75t_SL BUFx24_ASAP7_75t_SL BUFx2_ASAP7_75t_SL BUFx3_ASAP7_75t_SL BUFx4_ASAP7_75t_SL BUFx5_ASAP7_75t_SL BUFx4f_ASAP7_75t_SL BUFx6f_ASAP7_75t_SL BUFx8_ASAP7_75t_SL HB1xp67_ASAP7_75t_SL HB2xp67_ASAP7_75t_SL BUFx10_ASAP7_75t_L BUFx12_ASAP7_75t_L BUFx12f_ASAP7_75t_L BUFx16f_ASAP7_75t_L BUFx24_ASAP7_75t_L BUFx2_ASAP7_75t_L BUFx3_ASAP7_75t_L BUFx4_ASAP7_75t_L BUFx5_ASAP7_75t_L BUFx4f_ASAP7_75t_L BUFx6f_ASAP7_75t_L BUFx8_ASAP7_75t_L HB1xp67_ASAP7_75t_L
+Total number of usable buffers: 27
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CKINVDCx10_ASAP7_75t_SL CKINVDCx12_ASAP7_75t_SL CKINVDCx11_ASAP7_75t_SL CKINVDCx14_ASAP7_75t_SL CKINVDCx16_ASAP7_75t_SL CKINVDCx20_ASAP7_75t_SL CKINVDCx8_ASAP7_75t_SL CKINVDCx5p33_ASAP7_75t_SL CKINVDCx6p67_ASAP7_75t_SL CKINVDCx9p33_ASAP7_75t_SL INVx11_ASAP7_75t_SL INVx13_ASAP7_75t_SL INVx1_ASAP7_75t_SL INVx2_ASAP7_75t_SL INVx3_ASAP7_75t_SL INVx4_ASAP7_75t_SL INVx5_ASAP7_75t_SL INVx6_ASAP7_75t_SL INVx8_ASAP7_75t_SL INVxp67_ASAP7_75t_SL INVxp33_ASAP7_75t_SL CKINVDCx10_ASAP7_75t_L CKINVDCx12_ASAP7_75t_L CKINVDCx11_ASAP7_75t_L CKINVDCx14_ASAP7_75t_L CKINVDCx16_ASAP7_75t_L CKINVDCx20_ASAP7_75t_L CKINVDCx8_ASAP7_75t_L CKINVDCx5p33_ASAP7_75t_L CKINVDCx6p67_ASAP7_75t_L CKINVDCx9p33_ASAP7_75t_L INVx11_ASAP7_75t_L INVx13_ASAP7_75t_L INVx1_ASAP7_75t_L INVx2_ASAP7_75t_L INVx3_ASAP7_75t_L INVx4_ASAP7_75t_L INVx5_ASAP7_75t_L INVx6_ASAP7_75t_L INVx8_ASAP7_75t_L INVxp67_ASAP7_75t_L INVxp33_ASAP7_75t_L
+Total number of usable inverters: 42
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: HB3xp67_ASAP7_75t_SL HB4xp67_ASAP7_75t_SL HB2xp67_ASAP7_75t_L HB3xp67_ASAP7_75t_L HB4xp67_ASAP7_75t_L
+Total number of identified usable delay cells: 5
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+#% Begin Load MMMC data post ... (date=07/29 12:15:47, mem=1457.4M)
+#% End Load MMMC data post ... (date=07/29 12:15:47, total cpu=0:00:00.0, real=0:00:00.0, peak res=1457.4M, current mem=1457.4M)
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   TCLNL-330            1  set_input_delay on clock root '%s' is no...
+WARNING   TECHLIB-1277         4  The %s '%s' has been defined for %s %s '...
+*** Message Summary: 5 warning(s), 0 error(s)
+

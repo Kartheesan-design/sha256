@@ -1,0 +1,163 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v21.15-s110_1, built Fri Sep 23 13:08:12 PDT 2022
+Options:	-init innovus.tcl 
+Date:		Wed Jul 29 12:08:18 2026
+Host:		cadence-server.vit.ac.in (x86_64 w/Linux 4.18.0-477.21.1.el8_8.x86_64) (16cores*32cpus*Intel(R) Xeon(R) Gold 6346 CPU @ 3.10GHz 36864KB)
+OS:		Red Hat Enterprise Linux release 8.8 (Ootpa)
+
+License:
+		[12:08:18.400289] Configured Lic search path (21.01-s002): 5280@10.110.5.59
+
+		invs	Innovus Implementation System	21.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (2062 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getVersion
+<CMD> getVersion
+<CMD> getVersion
+[INFO] Loading PVS 22.20 fill procedures
+Sourcing file "innovus.tcl" ...
+<CMD> set init_design_uniquify 1
+<CMD> set init_verilog ../synthesis/sha256.netlist.v
+<CMD> set init_design_netlisttype Verilog
+<CMD> set init_design_settop 1
+<CMD> set init_top_cell sha256
+<CMD> set init_lef_file {../techlef//asap7_tech_4x_201209.lef ../lef/scaled//asap7sc7p5t_28_L_4x_220121a.lef ../lef/scaled//asap7sc7p5t_28_SL_4x_220121a.lef ../lef/scaled//asap7sc7p5t_28_R_4x_220121a.lef}
+<CMD> set fp_core_cntl aspect
+<CMD> set fp_aspect_ratio 1.0000
+<CMD> set extract_shrink_factor 1.0
+<CMD> set init_assign_buffer 0
+<CMD> set init_pwr_net VDD
+<CMD> set init_gnd_net VSS
+<CMD> set init_cpf_file {}
+<CMD> set init_mmmc_file ../sha256.mmmc
+<CMD> init_design
+**ERROR: (IMPSYT-6284):	Failed to open file ../sha256.mmmc for read.
+
+Loading LEF file ../techlef/asap7_tech_4x_201209.lef ...
+
+Loading LEF file ../lef/scaled/asap7sc7p5t_28_L_4x_220121a.lef ...
+Set DBUPerIGU to M1 pitch 576.
+
+Loading LEF file ../lef/scaled/asap7sc7p5t_28_SL_4x_220121a.lef ...
+
+Loading LEF file ../lef/scaled/asap7sc7p5t_28_R_4x_220121a.lef ...
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+Loading view definition file from ../sha256.mmmc
+*** End library_loading (cpu=0.00min, real=0.00min, mem=0.0M, fe_cpu=0.23min, fe_real=0.52min, fe_mem=1006.4M) ***
+#% Begin Load netlist data ... (date=07/29 12:08:49, mem=1005.2M)
+*** Begin netlist parsing (mem=1006.4M) ***
+Created 0 new cells from 0 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '../synthesis/sha256.netlist.v'
+
+*** Memory Usage v#1 (Current mem = 1013.426M, initial mem = 483.871M) ***
+*** End netlist parsing (cpu=0:00:00.1, real=0:00:01.0, mem=1013.4M) ***
+#% End Load netlist data ... (date=07/29 12:08:50, total cpu=0:00:00.1, real=0:00:01.0, peak res=1013.9M, current mem=1013.0M)
+Set top cell to sha256.
+Hooked 0 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell sha256 ...
+*** Netlist is unique.
+Set DBUPerIGU to techSite asap7sc7p5t width 864.
+** info: there are 668 modules.
+** info: there are 11309 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 1071.340M, initial mem = 483.871M) ***
+Start create_tracks
+**WARN: (IMPSYC-2):	Timing information is not defined for cell XOR2xp5_ASAP7_75t_L; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
+**WARN: (IMPSYC-2):	Timing information is not defined for cell XOR2x2_ASAP7_75t_L; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
+**WARN: (IMPSYC-2):	Timing information is not defined for cell XNOR2xp5_ASAP7_75t_L; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
+**WARN: (IMPSYC-2):	Timing information is not defined for cell OR5x1_ASAP7_75t_L; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
+**WARN: (IMPSYC-2):	Timing information is not defined for cell OR4x1_ASAP7_75t_L; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
+**WARN: (IMPSYC-2):	Timing information is not defined for cell OR2x2_ASAP7_75t_L; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
+**WARN: (IMPSYC-2):	Timing information is not defined for cell OAI321xp33_ASAP7_75t_L; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
+**WARN: (IMPSYC-2):	Timing information is not defined for cell OAI31xp67_ASAP7_75t_L; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
+**WARN: (IMPSYC-2):	Timing information is not defined for cell OAI31xp33_ASAP7_75t_L; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
+**WARN: (IMPSYC-2):	Timing information is not defined for cell OAI22xp5_ASAP7_75t_L; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
+**WARN: (IMPSYC-2):	Timing information is not defined for cell OAI22xp33_ASAP7_75t_L; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
+**WARN: (IMPSYC-2):	Timing information is not defined for cell OAI221xp5_ASAP7_75t_L; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
+**WARN: (IMPSYC-2):	Timing information is not defined for cell OAI21xp5_ASAP7_75t_L; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
+**WARN: (IMPSYC-2):	Timing information is not defined for cell OAI21xp33_ASAP7_75t_L; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
+**WARN: (IMPSYC-2):	Timing information is not defined for cell OAI21x1_ASAP7_75t_L; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
+**WARN: (IMPSYC-2):	Timing information is not defined for cell OAI211xp5_ASAP7_75t_L; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
+**WARN: (IMPSYC-2):	Timing information is not defined for cell OA22x2_ASAP7_75t_L; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
+**WARN: (IMPSYC-2):	Timing information is not defined for cell OA21x2_ASAP7_75t_L; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
+**WARN: (IMPSYC-2):	Timing information is not defined for cell O2A1O1Ixp5_ASAP7_75t_L; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
+**WARN: (IMPSYC-2):	Timing information is not defined for cell O2A1O1Ixp33_ASAP7_75t_L; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
+**WARN: (EMS-27):	Message (IMPSYC-2) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+**ERROR: (IMPSYT-7327):	Active setup and hold analysis views were not provided in either file ../sha256.mmmc or by the -setup and -hold arguments to initDesign. The system requires at least one active setup and hold analysis view to be declared before the design can be initialized. You must add a set_analysis_view command to your script, or add the -setup and -hold options to your init_design invocation. You can use the all_analysis_view command to identify the currently available views. If you are using CPF in a physical-only flow, please use 'read_power_intent -cpf' and 'commit_power_intent' after init_design. Do not specify the CPF with the init_cpf_file variable in a physical-only flow.
+**ERROR: (IMPSYT-6692):	Invalid return code while executing 'innovus.tcl' was returned and script processing was stopped. Review the following error in 'innovus.tcl' then restart.
+Error info: innovus.tcl: 
+    while executing
+"error [putError $::uiEmsHandleId 7327 $::init_mmmc_file]"
+    (procedure "init_design" line 419)
+    invoked from within
+"init_design"
+    (file "innovus.tcl" line 38)
+    invoked from within
+"::se_source_orig innovus.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel [concat ::se_source_orig $args]"
+    (procedure "source" line 188)
+    invoked from within
+"source innovus.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel #0 source innovus.tcl"
+    ("eval" body line 1)
+    invoked from within
+"eval {uplevel #0 source innovus.tcl}"
+    (in namespace inscope "::" script line 1)
+    invoked from within
+"namespace inscope :: eval "uplevel #0 source $fileName"".
+<CMD> win
+<CMD> zoomBox -0.01825 -0.01025 0.03575 0.03800
+<CMD> zoomBox -0.09125 -0.05575 0.07750 0.09525
+<CMD> fit
+
+--------------------------------------------------------------------------------
+Exiting Innovus on Wed Jul 29 12:09:30 2026
+  Total CPU time:     0:00:16
+  Total real time:    0:01:13
+  Peak memory (main): 1303.19MB
+
+
+*** Memory Usage v#1 (Current mem = 1323.785M, initial mem = 483.871M) ***
+*** Message Summary: 74 warning(s), 4 error(s)
+
+--- Ending "Innovus" (totcpu=0:00:15.4, real=0:01:12, mem=1323.8M) ---

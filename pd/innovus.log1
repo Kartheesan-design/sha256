@@ -1,0 +1,100 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v21.15-s110_1, built Fri Sep 23 13:08:12 PDT 2022
+Options:	-init innovus.tcl 
+Date:		Wed Jul 29 11:37:38 2026
+Host:		cadence-server.vit.ac.in (x86_64 w/Linux 4.18.0-477.21.1.el8_8.x86_64) (16cores*32cpus*Intel(R) Xeon(R) Gold 6346 CPU @ 3.10GHz 36864KB)
+OS:		Red Hat Enterprise Linux release 8.8 (Ootpa)
+
+License:
+		[11:37:38.400313] Configured Lic search path (21.01-s002): 5280@10.110.5.59
+
+		invs	Innovus Implementation System	21.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (2062 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getVersion
+<CMD> getVersion
+<CMD> getVersion
+[INFO] Loading PVS 22.20 fill procedures
+Sourcing file "innovus.tcl" ...
+<CMD> set init_design_uniquify 1
+<CMD> set init_verilog ../run/netlist.v
+<CMD> set init_design_netlisttype Verilog
+<CMD> set init_design_settop 1
+<CMD> set init_top_cell sha256
+<CMD> set init_lef_file {../techlef//asap7_tech_4x_201209.lef ../lef/scaled//asap7sc7p5t_28_L_4x_220121a.lef ../lef/scaled//asap7sc7p5t_28_SL_4x_220121a.lef ../lef/scaled//asap7sc7p5t_28_R_4x_220121a.lef}
+<CMD> set fp_core_cntl aspect
+<CMD> set fp_aspect_ratio 1.0000
+<CMD> set extract_shrink_factor 1.0
+<CMD> set init_assign_buffer 0
+<CMD> set init_pwr_net VDD
+<CMD> set init_gnd_net VSS
+<CMD> set init_cpf_file {}
+<CMD> set init_mmmc_file ../scripts/sha256.mmmc
+<CMD> init_design
+**ERROR: (IMPSYT-6284):	Failed to open file ../scripts/sha256.mmmc for read.
+
+Loading LEF file ../techlef/asap7_tech_4x_201209.lef ...
+
+Loading LEF file ../lef/scaled/asap7sc7p5t_28_L_4x_220121a.lef ...
+Set DBUPerIGU to M1 pitch 576.
+
+Loading LEF file ../lef/scaled/asap7sc7p5t_28_SL_4x_220121a.lef ...
+
+Loading LEF file ../lef/scaled/asap7sc7p5t_28_R_4x_220121a.lef ...
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+Loading view definition file from ../scripts/sha256.mmmc
+*** End library_loading (cpu=0.00min, real=0.00min, mem=0.0M, fe_cpu=0.23min, fe_real=0.48min, fe_mem=1006.4M) ***
+**ERROR: (IMPSYT-16038):	The specified file '../run/netlist.v' could not be found. Check your file system, correct the file name.
+**ERROR: (IMPIMEX-7008):	No netlist files are found.
+**ERROR: (IMPSYT-6692):	Invalid return code while executing 'innovus.tcl' was returned and script processing was stopped. Review the following error in 'innovus.tcl' then restart.
+Error info: innovus.tcl: 
+    while executing
+"error $msg"
+    (procedure "apply_design" line 34)
+    invoked from within
+"apply_design $loadViewDefinition"
+    (procedure "init_design" line 405)
+    invoked from within
+"init_design"
+    (file "innovus.tcl" line 38)
+    invoked from within
+"::se_source_orig innovus.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel [concat ::se_source_orig $args]"
+    (procedure "source" line 188)
+    invoked from within
+"source innovus.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel #0 source innovus.tcl"
+    ("eval" body line 1)
+    invoked from within
+"eval {uplevel #0 source innovus.tcl}"
+    (in namespace inscope "::" script line 1)
+    invoked from within
+"namespace inscope :: eval "uplevel #0 source $fileName"".
+<CMD> win
+
+--------------------------------------------------------------------------------
+Exiting Innovus on Wed Jul 29 11:38:16 2026
+  Total CPU time:     0:00:14
+  Total real time:    0:00:40
+  Peak memory (main): 1016.96MB
+
+
+*** Memory Usage v#1 (Current mem = 1020.676M, initial mem = 483.871M) ***
+*** Message Summary: 0 warning(s), 5 error(s)
+
+--- Ending "Innovus" (totcpu=0:00:13.8, real=0:00:38.0, mem=1020.7M) ---

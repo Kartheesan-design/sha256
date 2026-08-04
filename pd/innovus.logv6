@@ -1,0 +1,401 @@
+[07/29 12:17:14      0s] 
+[07/29 12:17:14      0s] Cadence Innovus(TM) Implementation System.
+[07/29 12:17:14      0s] Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+[07/29 12:17:14      0s] 
+[07/29 12:17:14      0s] Version:	v21.15-s110_1, built Fri Sep 23 13:08:12 PDT 2022
+[07/29 12:17:14      0s] Options:	-init innovus.tcl 
+[07/29 12:17:14      0s] Date:		Wed Jul 29 12:17:14 2026
+[07/29 12:17:14      0s] Host:		cadence-server.vit.ac.in (x86_64 w/Linux 4.18.0-477.21.1.el8_8.x86_64) (16cores*32cpus*Intel(R) Xeon(R) Gold 6346 CPU @ 3.10GHz 36864KB)
+[07/29 12:17:14      0s] OS:		Red Hat Enterprise Linux release 8.8 (Ootpa)
+[07/29 12:17:14      0s] 
+[07/29 12:17:14      0s] License:
+[07/29 12:17:14      0s] 		[12:17:14.400257] Configured Lic search path (21.01-s002): 5280@10.110.5.59
+
+[07/29 12:17:14      0s] 		invs	Innovus Implementation System	21.1	checkout succeeded
+[07/29 12:17:14      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[07/29 12:17:29      9s] Reset Parastics called with the command setExtractRCMode -reset@(#)CDS: Innovus v21.15-s110_1 (64bit) 09/23/2022 13:08 (Linux 3.10.0-693.el7.x86_64)
+[07/29 12:17:32     11s] @(#)CDS: NanoRoute 21.15-s110_1 NR220912-2004/21_15-UB (database version 18.20.592) {superthreading v2.17}
+[07/29 12:17:32     11s] @(#)CDS: AAE 21.15-s039 (64bit) 09/23/2022 (Linux 3.10.0-693.el7.x86_64)
+[07/29 12:17:32     11s] @(#)CDS: CTE 21.15-s038_1 () Sep 20 2022 11:42:13 ( )
+[07/29 12:17:32     11s] @(#)CDS: SYNTECH 21.15-s012_1 () Sep  5 2022 10:25:51 ( )
+[07/29 12:17:32     11s] @(#)CDS: CPE v21.15-s076
+[07/29 12:17:32     11s] @(#)CDS: IQuantus/TQuantus 21.1.1-s867 (64bit) Sun Jun 26 22:12:54 PDT 2022 (Linux 3.10.0-693.el7.x86_64)
+[07/29 12:17:32     11s] @(#)CDS: OA 22.60-p076 Wed May 18 13:45:29 2022
+[07/29 12:17:32     11s] @(#)CDS: SGN 20.10-d001 (01-Jun-2020) (64 bit executable, Qt5.9.0)
+[07/29 12:17:32     11s] @(#)CDS: RCDB 11.15.0
+[07/29 12:17:32     11s] @(#)CDS: STYLUS 21.12-s013_1 (08/15/2022 08:25 PDT)
+[07/29 12:17:32     11s] @(#)CDS: SystemPlanner-21.15Rel-8720 (21.15) (2022-08-22 18:31:54+0800)
+[07/29 12:17:32     11s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_1956009_cadence-server.vit.ac.in_22bec0039_LrtmEG.
+
+[07/29 12:17:32     11s] Change the soft stacksize limit to 0.2%RAM (2062 mbytes). Set global soft_stack_size_limit to change the value.
+[07/29 12:17:35     12s] 
+[07/29 12:17:35     12s] **INFO:  MMMC transition support version v31-84 
+[07/29 12:17:35     12s] 
+[07/29 12:17:35     12s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[07/29 12:17:35     12s] <CMD> suppressMessage ENCEXT-2799
+[07/29 12:17:35     12s] <CMD> getVersion
+[07/29 12:17:35     12s] <CMD> getVersion
+[07/29 12:17:35     13s] <CMD> getVersion
+[07/29 12:17:35     13s] [INFO] Loading PVS 22.20 fill procedures
+[07/29 12:17:36     13s] Sourcing file "innovus.tcl" ...
+[07/29 12:17:36     13s] <CMD> set init_design_uniquify 1
+[07/29 12:17:36     13s] <CMD> set init_verilog ../synthesis/sha256.netlist.v
+[07/29 12:17:36     13s] <CMD> set init_design_netlisttype Verilog
+[07/29 12:17:36     13s] <CMD> set init_design_settop 1
+[07/29 12:17:36     13s] <CMD> set init_top_cell sha256
+[07/29 12:17:36     13s] <CMD> set init_lef_file {../techlef//asap7_tech_4x_201209.lef ../lef/scaled//asap7sc7p5t_28_L_4x_220121a.lef ../lef/scaled//asap7sc7p5t_28_SL_4x_220121a.lef ../lef/scaled//asap7sc7p5t_28_R_4x_220121a.lef}
+[07/29 12:17:36     13s] <CMD> set fp_core_cntl aspect
+[07/29 12:17:36     13s] <CMD> set fp_aspect_ratio 1.0000
+[07/29 12:17:36     13s] <CMD> set extract_shrink_factor 1.0
+[07/29 12:17:36     13s] <CMD> set init_assign_buffer 0
+[07/29 12:17:36     13s] <CMD> set init_pwr_net VDD
+[07/29 12:17:36     13s] <CMD> set init_gnd_net VSS
+[07/29 12:17:36     13s] <CMD> set init_cpf_file {}
+[07/29 12:17:36     13s] <CMD> set init_mmmc_file sha256.mmmc
+[07/29 12:17:36     13s] <CMD> init_design
+[07/29 12:17:36     13s] #% Begin Load MMMC data ... (date=07/29 12:17:36, mem=991.9M)
+[07/29 12:17:36     13s] #% End Load MMMC data ... (date=07/29 12:17:36, total cpu=0:00:00.0, real=0:00:00.0, peak res=993.0M, current mem=993.0M)
+[07/29 12:17:36     13s] 
+[07/29 12:17:36     13s] Loading LEF file ../techlef/asap7_tech_4x_201209.lef ...
+[07/29 12:17:36     13s] 
+[07/29 12:17:36     13s] Loading LEF file ../lef/scaled/asap7sc7p5t_28_L_4x_220121a.lef ...
+[07/29 12:17:36     13s] Set DBUPerIGU to M1 pitch 576.
+[07/29 12:17:36     13s] 
+[07/29 12:17:36     13s] Loading LEF file ../lef/scaled/asap7sc7p5t_28_SL_4x_220121a.lef ...
+[07/29 12:17:36     13s] 
+[07/29 12:17:36     13s] Loading LEF file ../lef/scaled/asap7sc7p5t_28_R_4x_220121a.lef ...
+[07/29 12:17:36     13s] 
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+[07/29 12:17:36     13s] Loading view definition file from sha256.mmmc
+[07/29 12:17:36     13s] Reading tc timing library '/home/userdata/22bec0039/sha256/lib/asap7sc7p5t_AO_LVT_TT_nldm_211120.lib' ...
+[07/29 12:17:37     14s] Read 42 cells in library 'asap7sc7p5t_AO_LVT_TT_nldm_211120' 
+[07/29 12:17:37     14s] Reading tc timing library '/home/userdata/22bec0039/sha256/lib/asap7sc7p5t_INVBUF_LVT_TT_nldm_220122.lib' ...
+[07/29 12:17:37     14s] Read 37 cells in library 'asap7sc7p5t_INVBUF_LVT_TT_nldm_211120' 
+[07/29 12:17:37     14s] Reading tc timing library '/home/userdata/22bec0039/sha256/lib/asap7sc7p5t_OA_LVT_TT_nldm_211120.lib' ...
+[07/29 12:17:37     14s] Read 34 cells in library 'asap7sc7p5t_OA_LVT_TT_nldm_211120' 
+[07/29 12:17:37     14s] Reading tc timing library '/home/userdata/22bec0039/sha256/lib/asap7sc7p5t_SEQ_LVT_TT_nldm_220123.lib' ...
+[07/29 12:17:37     14s] Read 33 cells in library 'asap7sc7p5t_SEQ_LVT_TT_nldm_220123' 
+[07/29 12:17:37     14s] Reading tc timing library '/home/userdata/22bec0039/sha256/lib/asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.lib' ...
+[07/29 12:17:37     14s] **WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/userdata/22bec0039/sha256/lib/asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.lib, Line 11387)
+[07/29 12:17:37     14s] **WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/userdata/22bec0039/sha256/lib/asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120.lib, Line 14287)
+[07/29 12:17:37     14s] Read 56 cells in library 'asap7sc7p5t_SIMPLE_LVT_TT_nldm_211120' 
+[07/29 12:17:37     14s] Reading tc timing library '/home/userdata/22bec0039/sha256/lib/asap7sc7p5t_AO_SLVT_TT_nldm_211120.lib' ...
+[07/29 12:17:38     15s] Read 42 cells in library 'asap7sc7p5t_AO_SLVT_TT_nldm_211120' 
+[07/29 12:17:38     15s] Reading tc timing library '/home/userdata/22bec0039/sha256/lib/asap7sc7p5t_INVBUF_SLVT_TT_nldm_220122.lib' ...
+[07/29 12:17:38     15s] Read 37 cells in library 'asap7sc7p5t_INVBUF_SLVT_TT_nldm_211120' 
+[07/29 12:17:38     15s] Reading tc timing library '/home/userdata/22bec0039/sha256/lib/asap7sc7p5t_OA_SLVT_TT_nldm_211120.lib' ...
+[07/29 12:17:39     16s] Read 34 cells in library 'asap7sc7p5t_OA_SLVT_TT_nldm_211120' 
+[07/29 12:17:39     16s] Reading tc timing library '/home/userdata/22bec0039/sha256/lib/asap7sc7p5t_SEQ_SLVT_TT_nldm_220123.lib' ...
+[07/29 12:17:39     16s] Read 33 cells in library 'asap7sc7p5t_SEQ_SLVT_TT_nldm_220123' 
+[07/29 12:17:39     16s] Reading tc timing library '/home/userdata/22bec0039/sha256/lib/asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib' ...
+[07/29 12:17:39     16s] **WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/userdata/22bec0039/sha256/lib/asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib, Line 11387)
+[07/29 12:17:39     16s] **WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/userdata/22bec0039/sha256/lib/asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120.lib, Line 14287)
+[07/29 12:17:39     16s] Read 56 cells in library 'asap7sc7p5t_SIMPLE_SLVT_TT_nldm_211120' 
+[07/29 12:17:39     16s] Ending "PreSetAnalysisView" (total cpu=0:00:03.1, real=0:00:03.0, peak res=1164.9M, current mem=1022.1M)
+[07/29 12:17:39     16s] *** End library_loading (cpu=0.05min, real=0.05min, mem=77.0M, fe_cpu=0.27min, fe_real=0.42min, fe_mem=1080.5M) ***
+[07/29 12:17:39     16s] #% Begin Load netlist data ... (date=07/29 12:17:39, mem=1022.1M)
+[07/29 12:17:39     16s] *** Begin netlist parsing (mem=1080.5M) ***
+[07/29 12:17:39     16s] Created 404 new cells from 10 timing libraries.
+[07/29 12:17:39     16s] Reading netlist ...
+[07/29 12:17:39     16s] Backslashed names will retain backslash and a trailing blank character.
+[07/29 12:17:39     16s] Reading verilog netlist '../synthesis/sha256.netlist.v'
+[07/29 12:17:39     16s] 
+[07/29 12:17:39     16s] *** Memory Usage v#1 (Current mem = 1083.531M, initial mem = 491.871M) ***
+[07/29 12:17:39     16s] *** End netlist parsing (cpu=0:00:00.1, real=0:00:00.0, mem=1083.5M) ***
+[07/29 12:17:39     16s] #% End Load netlist data ... (date=07/29 12:17:39, total cpu=0:00:00.1, real=0:00:00.0, peak res=1057.6M, current mem=1057.6M)
+[07/29 12:17:39     16s] Set top cell to sha256.
+[07/29 12:17:41     16s] Hooked 404 DB cells to tlib cells.
+[07/29 12:17:41     16s] Ending "BindLib:" (total cpu=0:00:00.2, real=0:00:00.0, peak res=1096.0M, current mem=1096.0M)
+[07/29 12:17:41     16s] Starting recursive module instantiation check.
+[07/29 12:17:41     16s] No recursion found.
+[07/29 12:17:41     16s] Building hierarchical netlist for Cell sha256 ...
+[07/29 12:17:41     16s] *** Netlist is unique.
+[07/29 12:17:41     16s] Set DBUPerIGU to techSite asap7sc7p5t width 864.
+[07/29 12:17:41     16s] Setting Std. cell height to 4320 DBU (smallest netlist inst).
+[07/29 12:17:41     16s] ** info: there are 668 modules.
+[07/29 12:17:41     16s] ** info: there are 11309 stdCell insts.
+[07/29 12:17:41     16s] 
+[07/29 12:17:41     16s] *** Memory Usage v#1 (Current mem = 1159.445M, initial mem = 491.871M) ***
+[07/29 12:17:41     16s] Start create_tracks
+[07/29 12:17:41     16s] Extraction setup Started 
+[07/29 12:17:41     16s] 
+[07/29 12:17:41     16s] Trim Metal Layers:
+[07/29 12:17:41     16s] Initializing multi-corner RC extraction with 1 active RC Corners ...
+[07/29 12:17:41     16s] Captable file(s) not specified in multi-corner setup. PreRoute extraction will use technology file. For postRoute extraction, default value for effort level would be 'medium' and effort level 'low' would not be allowed.
+[07/29 12:17:41     16s] __QRC_SADV_USE_LE__ is set 0
+[07/29 12:17:41     17s] Metal Layer Id 1 is M1 
+[07/29 12:17:41     17s] Metal Layer Id 2 is M2 
+[07/29 12:17:41     17s] Metal Layer Id 3 is M3 
+[07/29 12:17:41     17s] Metal Layer Id 4 is M4 
+[07/29 12:17:41     17s] Metal Layer Id 5 is M5 
+[07/29 12:17:41     17s] Metal Layer Id 6 is M6 
+[07/29 12:17:41     17s] Metal Layer Id 7 is M7 
+[07/29 12:17:41     17s] Metal Layer Id 8 is M8 
+[07/29 12:17:41     17s] Metal Layer Id 9 is M9 
+[07/29 12:17:41     17s] Metal Layer Id 10 is Pad 
+[07/29 12:17:41     17s] Via Layer Id 33 is V0 
+[07/29 12:17:41     17s] Via Layer Id 34 is V1 
+[07/29 12:17:41     17s] Via Layer Id 35 is V2 
+[07/29 12:17:41     17s] Via Layer Id 36 is V3 
+[07/29 12:17:41     17s] Via Layer Id 37 is V4 
+[07/29 12:17:41     17s] Via Layer Id 38 is V5 
+[07/29 12:17:41     17s] Via Layer Id 39 is V6 
+[07/29 12:17:41     17s] Via Layer Id 40 is V7 
+[07/29 12:17:41     17s] Via Layer Id 41 is V8 
+[07/29 12:17:41     17s] Via Layer Id 42 is V9 
+[07/29 12:17:41     17s] 
+[07/29 12:17:41     17s] Trim Metal Layers:
+[07/29 12:17:41     17s] Generating auto layer map file.
+[07/29 12:17:41     17s]  lef metal Layer Id 1 mapped to tech Id 2 of Layer lisd 
+[07/29 12:17:41     17s]  lef via Layer Id 1 mapped to tech Id 3 of Layer v0 
+[07/29 12:17:41     17s]  lef metal Layer Id 2 mapped to tech Id 4 of Layer m1 
+[07/29 12:17:41     17s]  lef via Layer Id 2 mapped to tech Id 5 of Layer v1 
+[07/29 12:17:41     17s]  lef metal Layer Id 3 mapped to tech Id 6 of Layer m2 
+[07/29 12:17:41     17s]  lef via Layer Id 3 mapped to tech Id 7 of Layer v2 
+[07/29 12:17:41     17s]  lef metal Layer Id 4 mapped to tech Id 8 of Layer m3 
+[07/29 12:17:41     17s]  lef via Layer Id 4 mapped to tech Id 9 of Layer v3 
+[07/29 12:17:41     17s]  lef metal Layer Id 5 mapped to tech Id 10 of Layer m4 
+[07/29 12:17:41     17s]  lef via Layer Id 5 mapped to tech Id 11 of Layer v4 
+[07/29 12:17:41     17s]  lef metal Layer Id 6 mapped to tech Id 12 of Layer m5 
+[07/29 12:17:41     17s]  lef via Layer Id 6 mapped to tech Id 13 of Layer v5 
+[07/29 12:17:41     17s]  lef metal Layer Id 7 mapped to tech Id 14 of Layer m6 
+[07/29 12:17:41     17s]  lef via Layer Id 7 mapped to tech Id 15 of Layer v6 
+[07/29 12:17:41     17s]  lef metal Layer Id 8 mapped to tech Id 16 of Layer m7 
+[07/29 12:17:41     17s]  lef via Layer Id 8 mapped to tech Id 17 of Layer v7 
+[07/29 12:17:41     17s]  lef metal Layer Id 9 mapped to tech Id 18 of Layer m8 
+[07/29 12:17:41     17s]  lef via Layer Id 9 mapped to tech Id 19 of Layer v8 
+[07/29 12:17:41     17s]  lef metal Layer Id 10 mapped to tech Id 20 of Layer m9 
+[07/29 12:17:41     17s] Metal Layer Id 1 mapped to 2 
+[07/29 12:17:41     17s] Via Layer Id 1 mapped to 3 
+[07/29 12:17:41     17s] Metal Layer Id 2 mapped to 4 
+[07/29 12:17:41     17s] Via Layer Id 2 mapped to 5 
+[07/29 12:17:41     17s] Metal Layer Id 3 mapped to 6 
+[07/29 12:17:41     17s] Via Layer Id 3 mapped to 7 
+[07/29 12:17:41     17s] Metal Layer Id 4 mapped to 8 
+[07/29 12:17:41     17s] Via Layer Id 4 mapped to 9 
+[07/29 12:17:41     17s] Metal Layer Id 5 mapped to 10 
+[07/29 12:17:41     17s] Via Layer Id 5 mapped to 11 
+[07/29 12:17:41     17s] Metal Layer Id 6 mapped to 12 
+[07/29 12:17:41     17s] Via Layer Id 6 mapped to 13 
+[07/29 12:17:41     17s] Metal Layer Id 7 mapped to 14 
+[07/29 12:17:41     17s] Via Layer Id 7 mapped to 15 
+[07/29 12:17:41     17s] Metal Layer Id 8 mapped to 16 
+[07/29 12:17:41     17s] Via Layer Id 8 mapped to 17 
+[07/29 12:17:41     17s] Metal Layer Id 9 mapped to 18 
+[07/29 12:17:41     17s] Via Layer Id 9 mapped to 19 
+[07/29 12:17:41     17s] Metal Layer Id 10 mapped to 20 
+[07/29 12:17:41     17s] eee: pegPreRouteEnableSaveRestoreRCPatterns:1, retVal:1, doesAnyTechFileNeedExtraction1
+[07/29 12:17:41     17s] eee: Reading patterns meta data.
+[07/29 12:17:41     17s] eee: PatternAvail:0, PreRoutePatternReadFailed:1
+[07/29 12:17:41     17s] Restore PreRoute Pattern Extraction data failed.
+[07/29 12:17:41     17s] Importing multi-corner technology file(s) for preRoute extraction...
+[07/29 12:17:41     17s] ../qrc/qrcTechFile_typ03_scaled4xV06
+[07/29 12:17:42     17s] Metal Layer Id 1 is M1 
+[07/29 12:17:42     17s] Metal Layer Id 2 is M2 
+[07/29 12:17:42     17s] Metal Layer Id 3 is M3 
+[07/29 12:17:42     17s] Metal Layer Id 4 is M4 
+[07/29 12:17:42     17s] Metal Layer Id 5 is M5 
+[07/29 12:17:42     17s] Metal Layer Id 6 is M6 
+[07/29 12:17:42     17s] Metal Layer Id 7 is M7 
+[07/29 12:17:42     17s] Metal Layer Id 8 is M8 
+[07/29 12:17:42     17s] Metal Layer Id 9 is M9 
+[07/29 12:17:42     17s] Metal Layer Id 10 is Pad 
+[07/29 12:17:42     17s] Via Layer Id 33 is V0 
+[07/29 12:17:42     17s] Via Layer Id 34 is V1 
+[07/29 12:17:42     17s] Via Layer Id 35 is V2 
+[07/29 12:17:42     17s] Via Layer Id 36 is V3 
+[07/29 12:17:42     17s] Via Layer Id 37 is V4 
+[07/29 12:17:42     17s] Via Layer Id 38 is V5 
+[07/29 12:17:42     17s] Via Layer Id 39 is V6 
+[07/29 12:17:42     17s] Via Layer Id 40 is V7 
+[07/29 12:17:42     17s] Via Layer Id 41 is V8 
+[07/29 12:17:42     17s] Via Layer Id 42 is V9 
+[07/29 12:17:42     17s] 
+[07/29 12:17:42     17s] Trim Metal Layers:
+[07/29 12:17:42     17s] Generating auto layer map file.
+[07/29 12:17:42     17s]  lef metal Layer Id 1 mapped to tech Id 2 of Layer lisd 
+[07/29 12:17:42     17s]  lef via Layer Id 1 mapped to tech Id 3 of Layer v0 
+[07/29 12:17:42     17s]  lef metal Layer Id 2 mapped to tech Id 4 of Layer m1 
+[07/29 12:17:42     17s]  lef via Layer Id 2 mapped to tech Id 5 of Layer v1 
+[07/29 12:17:42     17s]  lef metal Layer Id 3 mapped to tech Id 6 of Layer m2 
+[07/29 12:17:42     17s]  lef via Layer Id 3 mapped to tech Id 7 of Layer v2 
+[07/29 12:17:42     17s]  lef metal Layer Id 4 mapped to tech Id 8 of Layer m3 
+[07/29 12:17:42     17s]  lef via Layer Id 4 mapped to tech Id 9 of Layer v3 
+[07/29 12:17:42     17s]  lef metal Layer Id 5 mapped to tech Id 10 of Layer m4 
+[07/29 12:17:42     17s]  lef via Layer Id 5 mapped to tech Id 11 of Layer v4 
+[07/29 12:17:42     17s]  lef metal Layer Id 6 mapped to tech Id 12 of Layer m5 
+[07/29 12:17:42     17s]  lef via Layer Id 6 mapped to tech Id 13 of Layer v5 
+[07/29 12:17:42     17s]  lef metal Layer Id 7 mapped to tech Id 14 of Layer m6 
+[07/29 12:17:42     17s]  lef via Layer Id 7 mapped to tech Id 15 of Layer v6 
+[07/29 12:17:42     17s]  lef metal Layer Id 8 mapped to tech Id 16 of Layer m7 
+[07/29 12:17:42     17s]  lef via Layer Id 8 mapped to tech Id 17 of Layer v7 
+[07/29 12:17:42     17s]  lef metal Layer Id 9 mapped to tech Id 18 of Layer m8 
+[07/29 12:17:42     17s]  lef via Layer Id 9 mapped to tech Id 19 of Layer v8 
+[07/29 12:17:42     17s]  lef metal Layer Id 10 mapped to tech Id 20 of Layer m9 
+[07/29 12:17:42     17s] Metal Layer Id 1 mapped to 2 
+[07/29 12:17:42     17s] Via Layer Id 1 mapped to 3 
+[07/29 12:17:42     17s] Metal Layer Id 2 mapped to 4 
+[07/29 12:17:42     17s] Via Layer Id 2 mapped to 5 
+[07/29 12:17:42     17s] Metal Layer Id 3 mapped to 6 
+[07/29 12:17:42     17s] Via Layer Id 3 mapped to 7 
+[07/29 12:17:42     17s] Metal Layer Id 4 mapped to 8 
+[07/29 12:17:42     17s] Via Layer Id 4 mapped to 9 
+[07/29 12:17:42     17s] Metal Layer Id 5 mapped to 10 
+[07/29 12:17:42     17s] Via Layer Id 5 mapped to 11 
+[07/29 12:17:42     17s] Metal Layer Id 6 mapped to 12 
+[07/29 12:17:42     17s] Via Layer Id 6 mapped to 13 
+[07/29 12:17:42     17s] Metal Layer Id 7 mapped to 14 
+[07/29 12:17:42     17s] Via Layer Id 7 mapped to 15 
+[07/29 12:17:42     17s] Metal Layer Id 8 mapped to 16 
+[07/29 12:17:42     17s] Via Layer Id 8 mapped to 17 
+[07/29 12:17:42     17s] Metal Layer Id 9 mapped to 18 
+[07/29 12:17:42     17s] Via Layer Id 9 mapped to 19 
+[07/29 12:17:42     17s] Metal Layer Id 10 mapped to 20 
+[07/29 12:17:43     19s] Completed (cpu: 0:00:02.2 real: 0:00:02.0)
+[07/29 12:17:43     19s] Set Shrink Factor to 1.00000
+[07/29 12:17:43     19s] Summary of Active RC-Corners : 
+[07/29 12:17:43     19s]  
+[07/29 12:17:43     19s]  Analysis View: view_tc
+[07/29 12:17:43     19s]     RC-Corner Name        : rc_typ_25
+[07/29 12:17:43     19s]     RC-Corner Index       : 0
+[07/29 12:17:43     19s]     RC-Corner Temperature : 25 Celsius
+[07/29 12:17:43     19s]     RC-Corner Cap Table   : ''
+[07/29 12:17:43     19s]     RC-Corner PreRoute Res Factor         : 1
+[07/29 12:17:43     19s]     RC-Corner PreRoute Cap Factor         : 1
+[07/29 12:17:43     19s]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[07/29 12:17:43     19s]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[07/29 12:17:43     19s]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[07/29 12:17:43     19s]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[07/29 12:17:43     19s]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[07/29 12:17:43     19s]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[07/29 12:17:43     19s]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[07/29 12:17:43     19s]     RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+[07/29 12:17:43     19s]     RC-Corner Technology file: '../qrc/qrcTechFile_typ03_scaled4xV06'
+[07/29 12:17:43     19s] 
+[07/29 12:17:43     19s] Trim Metal Layers:
+[07/29 12:17:43     19s] LayerId::1 widthSet size::1
+[07/29 12:17:43     19s] LayerId::2 widthSet size::1
+[07/29 12:17:43     19s] LayerId::3 widthSet size::1
+[07/29 12:17:43     19s] LayerId::4 widthSet size::1
+[07/29 12:17:43     19s] LayerId::5 widthSet size::1
+[07/29 12:17:43     19s] LayerId::6 widthSet size::1
+[07/29 12:17:43     19s] LayerId::7 widthSet size::1
+[07/29 12:17:43     19s] LayerId::8 widthSet size::1
+[07/29 12:17:43     19s] LayerId::9 widthSet size::1
+[07/29 12:17:43     19s] LayerId::10 widthSet size::1
+[07/29 12:17:43     19s] Updating RC grid for preRoute extraction ...
+[07/29 12:17:43     19s] eee: pegSigSF::1.070000
+[07/29 12:17:43     19s] Initializing multi-corner resistance tables ...
+[07/29 12:17:43     19s] eee: l::1 avDens::0.000000 usedTrk::0.000000 availTrk::0.000000 sigTrk::0.000000
+[07/29 12:17:43     19s] eee: l::2 avDens::0.000000 usedTrk::0.000000 availTrk::0.000000 sigTrk::0.000000
+[07/29 12:17:43     19s] eee: l::3 avDens::0.000000 usedTrk::0.000000 availTrk::0.000000 sigTrk::0.000000
+[07/29 12:17:43     19s] eee: l::4 avDens::0.000000 usedTrk::0.000000 availTrk::0.000000 sigTrk::0.000000
+[07/29 12:17:43     19s] eee: l::5 avDens::0.000000 usedTrk::0.000000 availTrk::0.000000 sigTrk::0.000000
+[07/29 12:17:43     19s] eee: l::6 avDens::0.000000 usedTrk::0.000000 availTrk::0.000000 sigTrk::0.000000
+[07/29 12:17:43     19s] eee: l::7 avDens::0.000000 usedTrk::0.000000 availTrk::0.000000 sigTrk::0.000000
+[07/29 12:17:43     19s] eee: l::8 avDens::0.000000 usedTrk::0.000000 availTrk::0.000000 sigTrk::0.000000
+[07/29 12:17:43     19s] eee: l::9 avDens::0.000000 usedTrk::0.000000 availTrk::0.000000 sigTrk::0.000000
+[07/29 12:17:43     19s] eee: l::10 avDens::0.000000 usedTrk::0.000000 availTrk::0.000000 sigTrk::0.000000
+[07/29 12:17:43     19s] {RT rc_typ_25 0 10 10 {4 1} {6 0} {8 0} {9 0} 4}
+[07/29 12:17:43     19s] eee: LAM: n=40 LLS=2-3 HLS=3-5 rDens=0.000000 uaWl=0.000000 uaWlH=0.000000 aWlH=0.000000 lMod=0 pMax=0.850000 pMod=82 wcR=0.615600 newSi=0.000000 wHLS=1.539000 siPrev=0 viaL=0.000000
+[07/29 12:17:43     19s] Default value for postRoute extraction mode's effortLevel (-effortLevel option of setExtractRCMode) changed to 'medium'.
+[07/29 12:17:43     19s] *Info: initialize multi-corner CTS.
+[07/29 12:17:43     19s] Ending "SetAnalysisView" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1378.4M, current mem=1151.0M)
+[07/29 12:17:43     19s] Reading timing constraints file '../sdc/sha256.sdc' ...
+[07/29 12:17:43     19s] Current (total cpu=0:00:19.3, real=0:00:29.0, peak res=1423.2M, current mem=1423.2M)
+[07/29 12:17:43     19s] **WARN: (TCLNL-330):	set_input_delay on clock root 'clk' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File ../sdc/sha256.sdc, Line 10).
+[07/29 12:17:43     19s] 
+[07/29 12:17:43     19s] INFO (CTE): Reading of timing constraints file ../sdc/sha256.sdc completed, with 1 WARNING
+[07/29 12:17:43     19s] Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1441.4M, current mem=1441.4M)
+[07/29 12:17:43     19s] Current (total cpu=0:00:19.3, real=0:00:29.0, peak res=1441.4M, current mem=1441.4M)
+[07/29 12:17:43     19s] Tech dependent Parameter, Build TLibAnalyzer for: cellAreaConsiderPadding
+[07/29 12:17:43     19s] 
+[07/29 12:17:43     19s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) Begin ...
+[07/29 12:17:43     19s] Summary for sequential cells identification: 
+[07/29 12:17:43     19s]   Identified SBFF number: 34
+[07/29 12:17:43     19s]   Identified MBFF number: 0
+[07/29 12:17:43     19s]   Identified SB Latch number: 0
+[07/29 12:17:43     19s]   Identified MB Latch number: 0
+[07/29 12:17:43     19s]   Not identified SBFF number: 0
+[07/29 12:17:43     19s]   Not identified MBFF number: 0
+[07/29 12:17:43     19s]   Not identified SB Latch number: 0
+[07/29 12:17:43     19s]   Not identified MB Latch number: 0
+[07/29 12:17:43     19s]   Number of sequential cells which are not FFs: 32
+[07/29 12:17:43     19s] Total number of combinational cells: 338
+[07/29 12:17:43     19s] Total number of sequential cells: 66
+[07/29 12:17:43     19s] Total number of tristate cells: 0
+[07/29 12:17:43     19s] Total number of level shifter cells: 0
+[07/29 12:17:43     19s] Total number of power gating cells: 0
+[07/29 12:17:43     19s] Total number of isolation cells: 0
+[07/29 12:17:43     19s] Total number of power switch cells: 0
+[07/29 12:17:43     19s] Total number of pulse generator cells: 0
+[07/29 12:17:43     19s] Total number of always on buffers: 0
+[07/29 12:17:43     19s] Total number of retention cells: 0
+[07/29 12:17:43     19s] List of usable buffers: BUFx10_ASAP7_75t_SL BUFx12_ASAP7_75t_SL BUFx12f_ASAP7_75t_SL BUFx16f_ASAP7_75t_SL BUFx24_ASAP7_75t_SL BUFx2_ASAP7_75t_SL BUFx3_ASAP7_75t_SL BUFx4_ASAP7_75t_SL BUFx5_ASAP7_75t_SL BUFx4f_ASAP7_75t_SL BUFx6f_ASAP7_75t_SL BUFx8_ASAP7_75t_SL HB1xp67_ASAP7_75t_SL HB2xp67_ASAP7_75t_SL BUFx10_ASAP7_75t_L BUFx12_ASAP7_75t_L BUFx12f_ASAP7_75t_L BUFx16f_ASAP7_75t_L BUFx24_ASAP7_75t_L BUFx2_ASAP7_75t_L BUFx3_ASAP7_75t_L BUFx4_ASAP7_75t_L BUFx5_ASAP7_75t_L BUFx4f_ASAP7_75t_L BUFx6f_ASAP7_75t_L BUFx8_ASAP7_75t_L HB1xp67_ASAP7_75t_L
+[07/29 12:17:43     19s] Total number of usable buffers: 27
+[07/29 12:17:43     19s] List of unusable buffers:
+[07/29 12:17:43     19s] Total number of unusable buffers: 0
+[07/29 12:17:43     19s] List of usable inverters: CKINVDCx10_ASAP7_75t_SL CKINVDCx12_ASAP7_75t_SL CKINVDCx11_ASAP7_75t_SL CKINVDCx14_ASAP7_75t_SL CKINVDCx16_ASAP7_75t_SL CKINVDCx20_ASAP7_75t_SL CKINVDCx8_ASAP7_75t_SL CKINVDCx5p33_ASAP7_75t_SL CKINVDCx6p67_ASAP7_75t_SL CKINVDCx9p33_ASAP7_75t_SL INVx11_ASAP7_75t_SL INVx13_ASAP7_75t_SL INVx1_ASAP7_75t_SL INVx2_ASAP7_75t_SL INVx3_ASAP7_75t_SL INVx4_ASAP7_75t_SL INVx5_ASAP7_75t_SL INVx6_ASAP7_75t_SL INVx8_ASAP7_75t_SL INVxp67_ASAP7_75t_SL INVxp33_ASAP7_75t_SL CKINVDCx10_ASAP7_75t_L CKINVDCx12_ASAP7_75t_L CKINVDCx11_ASAP7_75t_L CKINVDCx14_ASAP7_75t_L CKINVDCx16_ASAP7_75t_L CKINVDCx20_ASAP7_75t_L CKINVDCx8_ASAP7_75t_L CKINVDCx5p33_ASAP7_75t_L CKINVDCx6p67_ASAP7_75t_L CKINVDCx9p33_ASAP7_75t_L INVx11_ASAP7_75t_L INVx13_ASAP7_75t_L INVx1_ASAP7_75t_L INVx2_ASAP7_75t_L INVx3_ASAP7_75t_L INVx4_ASAP7_75t_L INVx5_ASAP7_75t_L INVx6_ASAP7_75t_L INVx8_ASAP7_75t_L INVxp67_ASAP7_75t_L INVxp33_ASAP7_75t_L
+[07/29 12:17:43     19s] Total number of usable inverters: 42
+[07/29 12:17:43     19s] List of unusable inverters:
+[07/29 12:17:43     19s] Total number of unusable inverters: 0
+[07/29 12:17:43     19s] List of identified usable delay cells: HB3xp67_ASAP7_75t_SL HB4xp67_ASAP7_75t_SL HB2xp67_ASAP7_75t_L HB3xp67_ASAP7_75t_L HB4xp67_ASAP7_75t_L
+[07/29 12:17:43     19s] Total number of identified usable delay cells: 5
+[07/29 12:17:43     19s] List of identified unusable delay cells:
+[07/29 12:17:43     19s] Total number of identified unusable delay cells: 0
+[07/29 12:17:43     19s] 
+[07/29 12:17:43     19s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) End ...
+[07/29 12:17:44     19s] 
+[07/29 12:17:44     19s] TimeStamp Deleting Cell Server Begin ...
+[07/29 12:17:44     19s] 
+[07/29 12:17:44     19s] TimeStamp Deleting Cell Server End ...
+[07/29 12:17:44     19s] Ending "Cell type marking" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1462.0M, current mem=1462.0M)
+[07/29 12:17:44     19s] 
+[07/29 12:17:44     19s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) Begin ...
+[07/29 12:17:44     19s] Summary for sequential cells identification: 
+[07/29 12:17:44     19s]   Identified SBFF number: 34
+[07/29 12:17:44     19s]   Identified MBFF number: 0
+[07/29 12:17:44     19s]   Identified SB Latch number: 0
+[07/29 12:17:44     19s]   Identified MB Latch number: 0
+[07/29 12:17:44     19s]   Not identified SBFF number: 0
+[07/29 12:17:44     19s]   Not identified MBFF number: 0
+[07/29 12:17:44     19s]   Not identified SB Latch number: 0
+[07/29 12:17:44     19s]   Not identified MB Latch number: 0
+[07/29 12:17:44     19s]   Number of sequential cells which are not FFs: 32
+[07/29 12:17:44     19s]  Visiting view : view_tc
+[07/29 12:17:44     19s]    : PowerDomain = none : Weighted F : unweighted  = 5.50 (1.000) with rcCorner = 0
+[07/29 12:17:44     19s]    : PowerDomain = none : Weighted F : unweighted  = 3.90 (1.000) with rcCorner = -1
+[07/29 12:17:44     19s]  Visiting view : view_tc
+[07/29 12:17:44     19s]    : PowerDomain = none : Weighted F : unweighted  = 5.50 (1.000) with rcCorner = 0
+[07/29 12:17:44     19s]    : PowerDomain = none : Weighted F : unweighted  = 3.90 (1.000) with rcCorner = -1
+[07/29 12:17:44     19s] TLC MultiMap info (StdDelay):
+[07/29 12:17:44     19s]   : delay_tc + tc + 1 + no RcCorner := 3.9ps
+[07/29 12:17:44     19s]   : delay_tc + tc + 1 + rc_typ_25 := 5.5ps
+[07/29 12:17:44     19s]  Setting StdDelay to: 5.5ps
+[07/29 12:17:44     19s] 
+[07/29 12:17:44     19s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) End ...
+[07/29 12:17:44     19s] 
+[07/29 12:17:44     19s] TimeStamp Deleting Cell Server Begin ...
+[07/29 12:17:44     19s] 
+[07/29 12:17:44     19s] TimeStamp Deleting Cell Server End ...
+[07/29 12:17:44     19s] #% Begin Load MMMC data post ... (date=07/29 12:17:44, mem=1462.7M)
+[07/29 12:17:44     19s] #% End Load MMMC data post ... (date=07/29 12:17:44, total cpu=0:00:00.0, real=0:00:00.0, peak res=1462.7M, current mem=1462.7M)
+[07/29 12:17:44     19s] 
+[07/29 12:17:44     19s] *** Summary of all messages that are not suppressed in this session:
+[07/29 12:17:44     19s] Severity  ID               Count  Summary                                  
+[07/29 12:17:44     19s] WARNING   TCLNL-330            1  set_input_delay on clock root '%s' is no...
+[07/29 12:17:44     19s] WARNING   TECHLIB-1277         4  The %s '%s' has been defined for %s %s '...
+[07/29 12:17:44     19s] *** Message Summary: 5 warning(s), 0 error(s)
+[07/29 12:17:44     19s] 
+[07/29 12:18:01     20s] 
+[07/29 12:18:01     20s] *** Memory Usage v#1 (Current mem = 1501.820M, initial mem = 491.871M) ***
+[07/29 12:18:01     20s] 
+[07/29 12:18:01     20s] *** Summary of all messages that are not suppressed in this session:
+[07/29 12:18:01     20s] Severity  ID               Count  Summary                                  
+[07/29 12:18:01     20s] WARNING   TCLNL-330            1  set_input_delay on clock root '%s' is no...
+[07/29 12:18:01     20s] WARNING   TECHLIB-1277         4  The %s '%s' has been defined for %s %s '...
+[07/29 12:18:01     20s] *** Message Summary: 5 warning(s), 0 error(s)
+[07/29 12:18:01     20s] 
+[07/29 12:18:01     20s] --- Ending "Innovus" (totcpu=0:00:20.2, real=0:00:47.0, mem=1501.8M) ---

@@ -7,7 +7,7 @@
 
 A full digital implementation of a **SHA-256 cryptographic core** carried through synthesis and physical design on the academic **ASAP7 7nm FinFET predictive PDK**, using **Cadence Genus** (synthesis) and **Cadence Innovus** (place & route). The flow reproduces the RTL-to-GDSII methodology taught in the Centre for Hardware Security (CHEST) Genus/Innovus tutorial series, applied end-to-end to the SHA-256 engine with pipelining and register retiming to close timing at a 1.66 GHz target.
 
-> **Attribution:** The Tcl flow scripts, floorplanning approach, and retiming methodology follow the Centre for Hardware Security's public Genus & Innovus tutorials. This repository documents a from-scratch re-execution of that flow on the SHA-256 module, with results specific to this run.
+> **Attribution:** The Tcl flow scripts, floorplanning approach, and retiming methodology follow the Centre for Hardware Security's public Genus & Innovus tutorials ([Physical Design Tutorial with Cadence Innovus](https://youtu.be/a79mtLfVx_E)). This repository documents a from-scratch re-execution of that flow on the SHA-256 module, with results specific to this run.
 
 ---
 
@@ -18,14 +18,9 @@ sha256-asap7-rtl2gdsii/
 ├── rtl/                         # Synthesizable Verilog source (SHA-256 core)
 ├── sdc/                         # Timing constraints — 1.66 GHz clock, I/O delays, transitions, fanout
 ├── synthesis/                   # Genus run scripts, logs, and synthesis-stage reports
-│   └── run_synth.tcl            # elaborate -> generic -> map -> pipeline insert -> retime -> export
+│   └── genus.tcl                # elaborate -> generic -> map -> pipeline insert -> retime -> export
 ├── pd/                          # Innovus physical design scripts + stage outputs
-│   ├── floorplan.tcl            # 170-row grid, pin assignment (M3/M4)
-│   ├── power_plan.tcl           # PG rings (M6/M7), stripes (M3/M4), follow-pin rails
-│   ├── place_cts.tcl            # place_opt_design, ccopt_design, hold fixing
-│   ├── route.tcl                # routeDesign, metal coloring/DRC cleanup
-│   └── signoff.tcl              # optDesign -postRoute, final signoff reports
-├── techlef/                     # ASAP7 technology LEF (colored M4-M7 layers)
+├── techlef/                     # ASAP7 technology LEF (colored M2-M9 layers)
 ├── lef/
 │   └── scaled/                  # Scaled standard cell LEF
 ├── lib/                         # Multi-corner Liberty (.lib) timing libraries
@@ -34,7 +29,7 @@ sha256-asap7-rtl2gdsii/
 │   ├── sha256_v21.def           # Post-route DEF
 │   └── sha256_v21.v             # Post-route netlist
 ├── docs/
-│   └── screenshots/             # PnR stage screenshots (see gallery below)
+│   └── screenshots/             # PnR stage screenshots
 │       ├── innovus.png
 │       ├── floorplan.png
 │       ├── pin_plan.png
@@ -52,8 +47,6 @@ sha256-asap7-rtl2gdsii/
 └── README.md
 ```
 
-> Folder names above mirror the actual project layout (`db/`, `lef/scaled/`, `lib/`, `pd/`, `qrc/`, `rtl/`, `sdc/`, `synthesis/`, `techlef/`); `docs/screenshots/` is added here to host the stage-by-stage visual log.
-
 ---
 
 ## Key Technical Highlights
@@ -65,7 +58,7 @@ sha256-asap7-rtl2gdsii/
 | **Target Frequency** | 1.66 GHz (602 ps clock period) |
 | **Optimization Strategy** | Multi-stage pipelining + Genus automatic register retiming (`set_db retime true`) |
 | **Floorplan** | 194.04 µm × 194.04 µm, 170 standard-cell rows, ~70% core density |
-| **Power Grid** | Core rings on M6/M7, vertical stripes on M3, horizontal stripes on M4, stapled follow-pin rails (M2–VIA–M1) |
+| **Power Grid** | Global rings and mesh stripes on **M8/M9**, standard cell follow-pin rails on **M1/M2** |
 | **Routing** | Signal routing M2–M7 with ASAP7 multi-patterning/color-aware DRC handling |
 | **Toolchain** | Cadence Genus (synthesis), Cadence Innovus (PnR) |
 
@@ -75,34 +68,34 @@ sha256-asap7-rtl2gdsii/
 
 ```
                          ┌───────────────────────────┐
-                         │        RTL SOURCE          │
-                         │   sha256_core.v (Verilog)  │
-                         └─────────────┬───────────────┘
+                         │        RTL SOURCE         │
+                         │   sha256_core.v (Verilog) │
+                         └─────────────┬─────────────┘
                                        │
                           ┌────────────▼────────────┐
-                          │   CADENCE GENUS (Synth)  │
-                          │  elaborate → generic     │
-                          │  map → PIPELINE INSERT   │
-                          │  RETIME (set_db retime)  │
-                          └────────────┬──────────────┘
+                          │   CADENCE GENUS (Synth) │
+                          │  elaborate → generic    │
+                          │  map → PIPELINE INSERT  │
+                          │  RETIME (set_db retime) │
+                          └────────────┬────────────┘
                                        │  mapped netlist (.v) + SDC + SDF
                           ┌────────────▼──────────────┐
                           │     CADENCE INNOVUS       │
                           │  ┌──────────────────────┐ │
                           │  │ Floorplan (170-row)  │ │
-                          │  │ Power Plan (M3–M7)   │ │
+                          │  │ Power Plan (M8–M9)   │ │
                           │  │ Placement (place_opt)│ │
-                          │  │ CTS (ccopt_design)    │ │
-                          │  │ Hold-fix buffering    │ │
-                          │  │ Routing (M2–M7)       │ │
-                          │  │ Post-route optDesign  │ │
+                          │  │ CTS (ccopt_design)   │ │
+                          │  │ Hold-fix buffering   │ │
+                          │  │ Routing (M2–M7)      │ │
+                          │  │ Post-route optDesign │ │
                           │  └──────────────────────┘ │
                           └────────────┬──────────────┘
                                        │
                           ┌────────────▼──────────────┐
-                          │     SIGNOFF & GDSII        │
-                          │  STA, DRC, LVS, GDS export │
-                          └────────────────────────────┘
+                          │     SIGNOFF & GDSII       │
+                          │  STA, DRC, LVS, GDS export│
+                          └───────────────────────────┘
 ```
 
 ---
@@ -120,9 +113,7 @@ sha256-asap7-rtl2gdsii/
 | **Core Utilization / Density** | ~70% |
 | **Clock Skew (post-CTS)** | < 20–30 ps across sequential sinks |
 | **DRC Status** | Clean — 0 violations |
-| **Routing Layers Used** | M2–M7 (signal), M3/M4 (PG stripes), M6/M7 (PG rings) |
-
-> Full per-corner STA, congestion, and DRC reports are under `reports/`.
+| **Routing Layers Used** | M2–M7 (signal), **M8/M9 (PG rings and stripes)** |
 
 ---
 
@@ -143,35 +134,10 @@ genus -f run_synth.tcl -log logs/genus_synth.log
 5. `set_db retime true; retime` — automatic register retiming
 6. Export mapped netlist and reports to `synthesis/`
 
-### 2. Physical Design (Cadence Innovus)
 
-```bash
-cd pd
-innovus -files init_design.tcl -log logs/innovus_pnr.log
-```
 
-Executed in sequence inside the Innovus session:
-
-```tcl
-source floorplan.tcl      ; # 170-row grid, M3/M4 pin assignment
-source power_plan.tcl     ; # M6/M7 rings, M3/M4 stripes, follow-pin rails
-source place_cts.tcl      ; # place_opt_design, ccopt_design, hold fixing
-source route.tcl          ; # routeDesign, metal coloring / DRC cleanup
-source signoff.tcl        ; # optDesign -postRoute, final signoff reports
-```
-
-### 3. Signoff Deliverables
-
-Post-run, the following are generated in `db/`:
-- `sha256_v21.def` — final post-route DEF
-- `sha256_v21.v` — final post-route netlist
-- Timing, power, and DRC/LVS reports under `pd/` and `synthesis/`
-
----
 
 ## Physical Design Flow — Stage Gallery
-
-Screenshots captured at each stage of the Innovus flow, from floorplan through final routing:
 
 | Stage | Screenshot |
 |---|---|
@@ -183,15 +149,6 @@ Screenshots captured at each stage of the Innovus flow, from floorplan through f
 | Placement | `docs/screenshots/placement.png`, `docs/screenshots/placed_cells.png` |
 | Clock Tree Synthesis | `docs/screenshots/post_cts.png`, `docs/screenshots/clock_tree.png` |
 | Routing | `docs/screenshots/sroute.png` |
-
-```markdown
-<!-- Example embed once screenshots are pushed to docs/screenshots/ -->
-![Floorplan](docs/screenshots/floorplan.png)
-![Power Plan Rings](docs/screenshots/power_plan_rings.png)
-![Placement](docs/screenshots/placement.png)
-![Post-CTS Clock Tree](docs/screenshots/clock_tree.png)
-![Final Routing](docs/screenshots/sroute.png)
-```
 
 ---
 
